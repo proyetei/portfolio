@@ -14,3 +14,11 @@ export const TDdata = {
     bulletpoints: ["Developed 50+ scripts for automating workflows of PEGA application in Java, Angular, Selenium and Cucumber impacting 200K+ customers",
     "Reduced BDD test flakiness by 30% and automation execution time by 50% through robust parallelization strategies",]
 };
+export const CanadaPostData = {
+    image: "/canada_post_image.jpg",
+    logo: "/canada_post_logo.jpeg",
+    jobTitle: "Software Developer Intern",
+    company: "Canada Post",
+    bulletpoints: ["Developed features for E-commerce platform impacting thousands with AngularJS, Typescript, Tailwind, Postman, Git, and Bitbucket and worked with cross-functional teams in an Agile environment",
+    "Reduced customer inquiries by 30% by developing 6+ email notifications for order status updates, including acknowledgment, processing, supplier receipt, cancellation, shipping, and delivery",]
+};
