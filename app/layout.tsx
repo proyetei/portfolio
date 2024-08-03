@@ -1,29 +1,3 @@
-// import type { Metadata } from "next";
-// import { Inter, Poppins } from "next/font/google";
-// import "./globals.css";
-
-// const inter = Inter({ subsets: ["latin"] });
-// const poppins = Poppins({ weight: ["400", "700"], subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "Proyetei Akanda",
-//   description: "Software engineering professional portfoli made with Next.js",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body className={`${poppins.className} bg-[#020617] text-violet-200`}>
-//         <div className=""> </div>
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
