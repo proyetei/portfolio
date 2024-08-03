@@ -1,6 +1,7 @@
 import { subTitle } from "@/fonts/font";
 import Image from "next/image";
-
+import { inView, motion, useInView } from "framer-motion"
+import { useRef } from "react";
 interface JobProps {
   image: string;
   logo: string;
@@ -10,8 +11,21 @@ interface JobProps {
 }
 
 const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, bulletpoints }) => {
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true });
   return (
-    <div>
+    <motion.div
+    ref={ref}
+    initial={{y: 100, opacity: 0,}}
+    animate={inView ? {
+      y: 0,
+      opacity: 1,
+      transition: {duration: 0.75, ease: 'easeInOut'}
+    } : {}}
+    exit={{
+      opacity: 0,
+      transition: {duration: 0.5, ease: 'easeInOut'}
+  }}>
       <div className="grid md:grid-cols-2 grid-cols-1 my-6 gap-4">
         <Image src={image} alt={`${company} group picture`} height={600} width={600} className="rounded-xl" />
         <div className="flex flex-row gap-4 rounded-3xl p-6">
@@ -28,7 +42,7 @@ const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, bulletpoi
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default JobCard
