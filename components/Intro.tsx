@@ -1,10 +1,21 @@
 import { subTitle } from "@/fonts/font";
 import CustomText from "./TitleText";
 import Image from "next/image";
-
+import { motion } from "framer-motion"
 export default function Intro(){
     return(
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+        <motion.div
+        initial={{y: 100, opacity: 0,}}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {duration: 0.5, ease: 'easeInOut'}
+        }}
+        exit={{
+          opacity: 0,
+          transition: {duration: 0.25, ease: 'easeInOut'}
+        }}>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             <div className="flex flex-col gap-4 items-center justify-center">
                 <div className={`${subTitle.className} flex flex-row items-end text-3xl gap-3 my-4`}> Hi, I&apos;m <CustomText text="PROYETEI"/> </div>
                 <p className="md:text-2xl text-lg text-indigo-400"> I&apos;m an efficient problem solver and self-starter, seasoned in fast-paced working environments </p>
@@ -15,5 +26,6 @@ export default function Intro(){
                 <Image src="/proyetei.jpg" alt="proyetei" width={450} height={450} className="drop-shadow-pink hover:grayscale" />
             </div>
         </div>
+        </motion.div>
     )
 }

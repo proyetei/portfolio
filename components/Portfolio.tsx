@@ -3,6 +3,7 @@ import { TfiArrowTopRight } from "react-icons/tfi";
 import { TabsComponent } from "./TabsComponent";
 import { useRouter } from "next/navigation";
 import { TbHexagonLetterPFilled } from "react-icons/tb";
+import Footer from "./Footer";
 
 export default function Portfolio(){
 	const router = useRouter()
@@ -16,6 +17,7 @@ export default function Portfolio(){
 				</p>
 			</div>
 			<TabsComponent />
+			<Footer />
         </div>
     )
 }
