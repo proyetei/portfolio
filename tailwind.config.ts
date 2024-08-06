@@ -81,6 +81,9 @@ const config = {
         lightblue: "0 0px 15px rgba(130, 120, 255, 0.5)"
         
       },
+      customBorder: {
+        'light-top': '4px solid #ffffff',
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require('daisyui'), nextui()]

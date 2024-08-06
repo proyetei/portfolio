@@ -8,14 +8,32 @@ import Intro from "./Intro"
 import WorkExperience from "./WorkExperience"
 import { motion } from "framer-motion"
 import Skills from "./Skills"
+import { useState } from "react"
 
 export function TabsComponent() {
+  const [activeTab, setActiveTab] = useState("experience");
+  const customTransform = () => {
+    switch (activeTab) {
+      case "experience":
+        return "translateX(-280%)";
+      case "projects":
+        return "translateX(0%)";
+      case "skills":
+        return "translateX(280%)";
+      default:
+        return "translateX(0%)";
+    }
+  };
   return (
     <Tabs defaultValue="experience" className="flex flex-col items-center justify-center md:p-16 p-4">
-      <TabsList className="drop-shadow-white">
-        <TabsTrigger value="experience">Experience</TabsTrigger>
-        <TabsTrigger value="projects">Projects</TabsTrigger>
-        <TabsTrigger value="skills">Skills</TabsTrigger>
+      <motion.div 
+          className="border fixed top-1 md:w-8 w-7 h-0.5 rounded-t-full bg-custom-light border-white transition-transform transform duration-300 ease-in-out"
+          style={{ transform: customTransform() }}
+        ></motion.div>
+      <TabsList>
+        <TabsTrigger value="experience" className="relative z-10" onClick={() => setActiveTab("experience")}>Work</TabsTrigger>
+        <TabsTrigger value="projects" className="relative z-10" onClick={() => setActiveTab("projects")}>Projects</TabsTrigger>
+        <TabsTrigger value="skills" className="relative z-10" onClick={() => setActiveTab("skills")}>Skills</TabsTrigger>
       </TabsList>
       <div className="items-center justify-center py-12 px-4">
         <TabsContent value="experience"> 
