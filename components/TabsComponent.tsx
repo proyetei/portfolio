@@ -9,6 +9,7 @@ import WorkExperience from "./WorkExperience"
 import { motion } from "framer-motion"
 import Skills from "./Skills"
 import { useState } from "react"
+import Projects from "./Projects"
 
 export function TabsComponent() {
   const [activeTab, setActiveTab] = useState("experience");
@@ -27,7 +28,7 @@ export function TabsComponent() {
   return (
     <Tabs defaultValue="experience" className="flex flex-col items-center justify-center md:p-16 p-4">
       <motion.div 
-          className="border fixed top-1 md:w-8 w-7 h-0.5 rounded-t-full bg-custom-light border-white transition-transform transform duration-300 ease-in-out"
+          className="border fixed top-1 md:w-8 w-7 h-0.5 rounded-t-full bg-custom-light border-white transition-transform transform duration-300 ease-in-ou drop-shadow-white"
           style={{ transform: customTransform() }}
         ></motion.div>
       <TabsList>
@@ -35,18 +36,16 @@ export function TabsComponent() {
         <TabsTrigger value="projects" className="relative z-10" onClick={() => setActiveTab("projects")}>Projects</TabsTrigger>
         <TabsTrigger value="skills" className="relative z-10" onClick={() => setActiveTab("skills")}>Skills</TabsTrigger>
       </TabsList>
-      <div className="items-center justify-center py-12 px-4">
         <TabsContent value="experience"> 
           <Intro />
           <WorkExperience />
         </TabsContent>
         <TabsContent value="projects"> 
-          Not implemented yet 
+          <Projects />
         </TabsContent>
         <TabsContent value="skills"> 
           <Skills />
         </TabsContent>
-      </div>
     </Tabs>
   )
 }

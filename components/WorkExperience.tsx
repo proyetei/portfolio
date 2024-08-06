@@ -24,6 +24,7 @@ export default function WorkExperience(){
                   logo={companyData.logo}
                   jobTitle={companyData.jobTitle}
                   company={companyData.company}
+                  date={companyData.date}
                   bulletpoints={companyData.bulletpoints}
                 />
               ))}
