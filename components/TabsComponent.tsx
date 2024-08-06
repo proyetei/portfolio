@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import Skills from "./Skills"
 import { useState } from "react"
 import Projects from "./Projects"
+import Education from "./Education"
 
 export function TabsComponent() {
   const [activeTab, setActiveTab] = useState("experience");
@@ -39,6 +40,7 @@ export function TabsComponent() {
         <TabsContent value="experience"> 
           <Intro />
           <WorkExperience />
+          <Education />
         </TabsContent>
         <TabsContent value="projects"> 
           <Projects />
