@@ -3,11 +3,11 @@ import { FaXmark } from "react-icons/fa6";
 import { MdOutlineOpenInFull } from "react-icons/md";
 import Draggable from 'react-draggable';
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaPython, FaReact, FaNodeJs, FaMinus, } from 'react-icons/fa';
 import { SiClerk, SiTailwindcss, SiTypescript, SiMongodb, SiAwsamplify, SiFirebase, SiGooglecloud } from 'react-icons/si';
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useRouter } from "next/navigation";
 import { subTitle } from "@/fonts/font";
 export const AetherTechStack =  [
@@ -25,9 +25,6 @@ export const AttendEaseTechStack = [
     { name: "Google Cloud Platform", icon: SiGooglecloud},
 ]
 export default function MacWindow(){
-    const router = useRouter();
-    const [isVisible, setIsVisible] = useState(true);
-    const [showButton, setShowButton] = useState(false);
     const customTransform = () => {
         switch (activeTab) {
           case "aether":
@@ -42,8 +39,7 @@ export default function MacWindow(){
     return(
         <div className=" w-screen flex flex-col items-center justify-center">
             <Draggable>
-        <div className=" rounded-xl md:h-[300px] md:w-3/5 w-[350px] h-[400px]">
-
+        <div className=" rounded-xl w-4/6 h-[400px]">
             <div className="bg-stone-800 h-10 w-full rounded-t-xl p-2"> 
                 <div className="flex flex-row gap-4">
                     <div className="flex flex-row gap-2 items-center justify-start">
@@ -74,14 +70,17 @@ export default function MacWindow(){
             initial={{ opacity: 0,}}
             animate={{
                 opacity: 1,
-                transition: {duration: 0.5, ease: 'easeInOut'}
+                transition: {duration: 0.5, ease: 'easeInOut', delay:0.5}
             }}>
                     <div className="flex flex-col items-center justify-center gap-8">
-                        <Image src="/overview.png" width={500} height={500} alt="overview" />
-                        <div className="flex space-x-4">
+                        <div className="w-4/5 flex items-center justify-center">
+                        <Image src="/overview.png" width={400} height={600} alt="overview" /> 
+                        </div>
+                         
+                        <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-2">
                             {AetherTechStack.map(({ name, icon: Icon }) => (
                                 <div key={name} className=" flex flex-col items-center md:text-base text-sm mx-2 p-2 rounded hover:bg-stone-700">
-                                    <Icon size={24} />
+                                    <Icon size={22} />
                                     <span>{name}</span>
                                 </div>
                             ))}
@@ -102,11 +101,19 @@ export default function MacWindow(){
                 </div>
                 ) :
                 (<div className="bg-stone-900 rounded-r-xl p-2">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="p-8">
+                    <motion.div 
+                    initial={{opacity: 0,}}
+                    animate={ {
+                        opacity: 1,
+                        transition: {duration: 0.75, ease: 'easeInOut', delay:0.5}} } className="flex flex-col items-center justify-center gap-8">
                         <Image src="/attend-ease.png" height={500} width={500} alt="attend ease" />
                         <div className="flex space-x-4">
                             {AttendEaseTechStack.map(({ name, icon: Icon }) => (
                                 <div key={name} className=" flex flex-col items-center md:text-base text-sm mx-2 p-2 rounded hover:bg-stone-700">
+                                    <div>
+
+                                    </div>
                                     <Icon size={24} />
                                     <span>{name}</span>
                                 </div>
@@ -117,8 +124,9 @@ export default function MacWindow(){
                     <p>A student attendance tracking software utilizing facial recognition via webcam using the Haar Cascade algorithm, integrating with GCP and Firebase to manage user data.
                     </p>
                     </div>
+                    </motion.div> 
                     </div>
-                                        
+                              
 
                 </div> ) }
             </div>
