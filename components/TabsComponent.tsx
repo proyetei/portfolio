@@ -33,9 +33,9 @@ export function TabsComponent() {
           style={{ transform: customTransform() }}
         ></motion.div>
       <TabsList>
-        <TabsTrigger value="experience" className="relative z-10" onClick={() => setActiveTab("experience")}>Work</TabsTrigger>
-        <TabsTrigger value="projects" className="relative z-10" onClick={() => setActiveTab("projects")}>Projects</TabsTrigger>
-        <TabsTrigger value="skills" className="relative z-10" onClick={() => setActiveTab("skills")}>Skills</TabsTrigger>
+        <TabsTrigger value="experience" className="relative z-10" onClick={() => setActiveTab("experience")}>WORK</TabsTrigger>
+        <TabsTrigger value="projects" className="relative z-10" onClick={() => setActiveTab("projects")}>PROJECTS</TabsTrigger>
+        <TabsTrigger value="skills" className="relative z-10" onClick={() => setActiveTab("skills")}>SKILLS</TabsTrigger>
       </TabsList>
         <TabsContent value="experience"> 
           <Intro />

@@ -5,11 +5,11 @@ import Image from "next/image";
 export default function Education(){
     return(
         <div className="flex flex-col my-16 gap-4">
-          <Divider />
+          <Divider/>
             <div className={`${subTitle.className}`}>
             <TitleText text="EDUCATION"/>
             </div>
-            <div className="bg-white/10 backdrop-blur-xl rounded-xl p-4">
+            <div className="dark:bg-white/10 bg-pink-900/20 backdrop-blur-xl rounded-xl p-4">
             <div className="flex flex-row gap-4 rounded-3xl p-6">
           <div className="items-center justify-start">
             <Image src="/mcmaster-logo.png" alt="mcmaster logo" height={150} width={150} />

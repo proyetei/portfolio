@@ -37,7 +37,7 @@ export default function MacWindow(){
       };
     const [activeTab, setActiveTab] = useState("aether");
     return(
-        <div className=" w-screen flex flex-col items-center justify-center">
+        <div className=" w-screen flex flex-col items-center justify-center text-slate-300">
             <Draggable>
         <div className=" rounded-xl w-4/6 h-[400px]">
             <div className="bg-stone-800 h-10 w-full rounded-t-xl p-2"> 
