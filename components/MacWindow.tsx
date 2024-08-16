@@ -5,7 +5,7 @@ import Draggable from 'react-draggable';
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { FaPython, FaReact, FaNodeJs, FaMinus, } from 'react-icons/fa';
-import { SiClerk, SiTailwindcss, SiTypescript, SiMongodb, SiAwsamplify, SiFirebase, SiGooglecloud } from 'react-icons/si';
+import { SiClerk, SiTailwindcss, SiTypescript, SiMongodb, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql, SiGraphql } from 'react-icons/si';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { motion, useInView } from "framer-motion"
 import { useRouter } from "next/navigation";
@@ -15,8 +15,9 @@ export const AetherTechStack =  [
     { name: "NodeJS", icon: FaNodeJs },
     { name: 'TypeScript', icon: SiTypescript },
     { name: 'TailwindCSS', icon: SiTailwindcss },
-    { name: 'MongoDB', icon: SiMongodb },
-    { name: 'AWS', icon: SiAwsamplify },
+    { name: 'PostgreSQL', icon: SiPostgresql },
+    { name: "GraphQL", icon: SiGraphql },
+    { name: 'AWS S3', icon: SiAwsamplify },
     { name: "Clerk", icon: SiClerk },
 ]
 export const AttendEaseTechStack = [
