@@ -8,10 +8,11 @@ interface JobProps {
   jobTitle: string;
   company: string;
   date: string;
+  jobType: string;
   bulletpoints: string[];
 }
 
-const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, date, bulletpoints }) => {
+const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, date, jobType, bulletpoints }) => {
 	const ref = useRef(null);
 	const inView = useInView(ref, { once: true });
   return (
@@ -36,7 +37,7 @@ const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, date, bul
           <div className="flex flex-col space-y-3">
           <div className={`${subTitle.className}`}>
             <p className="md:text-2xl text-lg font-extrabold">{jobTitle}</p> 
-            <p className="md:text-lg text-md font-extrabold">{company} · Co-op </p>
+            <p className="md:text-lg text-md font-extrabold">{company} · {jobType} </p>
             <p className="md:text-base text-md">{date}</p>
           </div>
           {bulletpoints.map((items, index) =>

@@ -1,12 +1,13 @@
 import { subTitle } from "@/fonts/font";
 import TitleText from "./TitleText";
-import { adpData, CanadaPostData, TDdata } from "@/lib/data";
+import { adpData, CanadaPostData, TDdata, ViewingPartyData } from "@/lib/data";
 import {Divider} from "@nextui-org/divider";
-import JobCard from "./boiletplate";
+import JobCard from "./JobCardBoilerplate";
 const allCompanyData = [
   adpData,
   TDdata,
-  CanadaPostData
+  CanadaPostData,
+  ViewingPartyData,
 ];
 export default function WorkExperience(){
     return(
@@ -25,6 +26,7 @@ export default function WorkExperience(){
                   jobTitle={companyData.jobTitle}
                   company={companyData.company}
                   date={companyData.date}
+                  jobType={companyData.type}
                   bulletpoints={companyData.bulletpoints}
                 />
               ))}
