@@ -30,6 +30,18 @@ export const CanadaPostData = {
     "Fixed various backend API issues with fetching wrong customer information and product details resulting in improved customer satisfaction" ]
 };
 
+
+export const LumoseMarketplaceData = {
+    image: "/lumose-marketplace-pic.png",
+    logo:"/lumose_marketplace_logo.jpeg",
+    jobTitle: "Web developer",
+    company: "Lumose Marketplace",
+    date: "Aug, 2022 - Sep 2022",
+    type: "Contract Part-time",
+    bulletpoints: ["Developed the landing page and about us page for startup Lumose Marketplace with React.js, Typescript, Tailwind CSS and Figma to prototype resulting in an increase of product sales by 40%, view it at: https://www.lumosemarketplace.com/", "Worked in an agile team of business analysts, developers, and legal experts and attended daily standup meetings with Asana, Slack and Google Meet"]
+}
+
+
 export const ViewingPartyData = {
     image: "/viewing-party.png",
     logo:"/viewing_party_logo.jpeg",
@@ -37,5 +49,5 @@ export const ViewingPartyData = {
     company: "Viewing Party",
     date: "June 22, 2022 - Aug 2022",
     type: "Contract Full-time",
-    bulletpoints: ["Developed the Chrome extension for ViewingParty with NEXT.JS 12.1 (2022), Typescript, Tailwind CSS, and Chakra-UI frontend and Express.js, Axios, Rapid API and Socket IO backend", "Utilized HTTP requests to 4+ 3rd party services including Netflix, Disney+, HBO Max and Peacock viewing with a streamer on Twitch to allow up to 100K+ users to watch video streams LEGALLY in sync with others"]
+    bulletpoints: ["Developed the Chrome extension for startup ViewingParty with NEXT.JS 12.1 (2022), Typescript, Tailwind CSS, and Chakra-UI frontend and Express.js, Axios, Rapid API and Socket IO backend", "Utilized HTTP requests to 4+ 3rd party services including Netflix, Disney+, HBO Max and Peacock viewing with a streamer on Twitch to allow up to 100K+ users to watch video streams LEGALLY in sync with others"]
 }

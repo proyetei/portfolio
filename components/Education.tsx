@@ -2,8 +2,24 @@ import { subTitle } from "@/fonts/font";
 import { Divider } from "@nextui-org/divider";
 import TitleText from "./TitleText";
 import Image from "next/image";
+import { inView, motion, useInView } from "framer-motion"
+import { useRef } from "react";
 export default function Education(){
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true });
     return(
+      <motion.div
+      ref={ref}
+      initial={{y: 100, opacity: 0,}}
+      animate={inView ? {
+        y: 0,
+        opacity: 1,
+        transition: {duration: 0.75, ease: 'easeInOut'}
+      } : {}}
+      exit={{
+        opacity: 0,
+        transition: {duration: 0.5, ease: 'easeInOut'}
+    }}>
         <div className="flex flex-col my-16 gap-4">
           <Divider/>
             <div className={`${subTitle.className}`}>
@@ -32,5 +48,6 @@ export default function Education(){
         </div>
             </div>
         </div>
+        </motion.div>
     )
 }

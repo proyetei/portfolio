@@ -3,7 +3,7 @@ import Image from "next/image";
 import { inView, motion, useInView } from "framer-motion"
 import { useRef } from "react";
 interface JobProps {
-  image: string;
+  image: string | '';
   logo: string;
   jobTitle: string;
   company: string;

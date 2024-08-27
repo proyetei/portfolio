@@ -24,7 +24,7 @@ export default function Toggle(){
     }, [darkMode])
 
     return(
-        <div className="relative h-8 w-16 flex items-center justify-center rounded-full cursor-pointer dark:bg-gray-900 dark:drop-shadow-white drop-shadow-pink bg-pink-300 hover:opacity-50" onClick={() => setDarkMode(!darkMode)}>
+        <div className="relative h-12 w-12 flex items-center justify-center rounded-full cursor-pointer dark:bg-indigo-700 bg-pink-300 hover:opacity-50" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? (
                 <FaMoon className="text-white" size={18} /> ) :
                 (<BsSunFill className="text-white" size={18} />)}
