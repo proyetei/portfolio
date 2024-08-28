@@ -12,7 +12,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({finishloading}) => {
     anime({
       targets: '#splash-screen',
       opacity: [1, 0],
-      duration: 1500,
+      duration: 2000,
       easing: 'easeInOutQuad',
       complete: () => finishloading(),
     });

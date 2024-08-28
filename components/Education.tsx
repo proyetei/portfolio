@@ -20,12 +20,12 @@ export default function Education(){
         opacity: 0,
         transition: {duration: 0.5, ease: 'easeInOut'}
     }}>
-        <div className="flex flex-col my-16 gap-4">
+        <div className="flex flex-col my-16 gap-4 font-semibold">
           <Divider/>
             <div className={`${subTitle.className}`}>
             <TitleText text="EDUCATION"/>
             </div>
-            <div className="dark:bg-white/10 bg-pink-900/20 backdrop-blur-xl rounded-xl p-4">
+            <div className="dark:bg-white/10 bg-blue-900/20 backdrop-blur-xl rounded-xl p-4">
             <div className="flex flex-row gap-4 rounded-3xl p-6">
           <div className="items-center justify-start">
             <Image src="/mcmaster-logo.png" alt="mcmaster logo" height={150} width={150} />

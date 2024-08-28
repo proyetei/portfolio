@@ -28,7 +28,7 @@ const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, date, job
       opacity: 0,
       transition: {duration: 0.5, ease: 'easeInOut'}
   }}>
-      <div className="grid md:grid-cols-2 grid-cols-1 my-6 gap-4">
+      <div className="grid md:grid-cols-2 grid-cols-1 my-6 gap-4 font-semibold">
         <Image src={image} alt={`${company} group picture`} height={600} width={600} className="rounded-xl" />
         <div className="flex flex-row gap-4 rounded-3xl p-6">
           <div className="items-center justify-start">
