@@ -28,6 +28,7 @@ const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, date, job
       opacity: 0,
       transition: {duration: 0.5, ease: 'easeInOut'}
   }}>
+    { image ? (
       <div className="grid md:grid-cols-2 grid-cols-1 my-6 gap-4 font-semibold">
         <Image src={image} alt={`${company} group picture`} height={600} width={600} className="rounded-xl" />
         <div className="flex flex-row gap-4 rounded-3xl p-6">
@@ -45,6 +46,24 @@ const JobCard: React.FC<JobProps> = ({ image, logo, jobTitle, company, date, job
           </div>
         </div>
       </div>
+    ) : (
+      <div className="grid grid-cols-1 my-6 gap-4 font-semibold">
+        <div className="flex flex-row gap-4 rounded-3xl p-6">
+          <div className="items-center justify-start">
+            <Image src={logo} alt={`${company} logo`} height={150} width={150} />
+          </div>
+          <div className="flex flex-col space-y-3">
+          <div className={`${subTitle.className}`}>
+            <p className="md:text-2xl text-lg font-extrabold">{jobTitle}</p> 
+            <p className="md:text-lg text-md font-extrabold">{company} · {jobType} </p>
+            <p className="md:text-base text-md">{date}</p>
+          </div>
+          {bulletpoints.map((items, index) =>
+             <li key={index} className="text-sm md:text-base opacity-70"> {items} </li>)}
+          </div>
+        </div>
+      </div>
+    )}
     </motion.div>
   );
 };
