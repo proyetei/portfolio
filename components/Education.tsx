@@ -34,7 +34,7 @@ export default function Education(){
           <div className={`${subTitle.className}`}>
             <p className="md:text-2xl text-lg font-extrabold"> McMaster University </p> 
             <p className="md:text-lg text-md font-extrabold"> Bachelor of Applied Science - BASc, Computer Science Co-op </p>
-            <p className="md:text-base text-md">Sep 2020 - May 2025 </p>
+            <p className="md:text-base text-md">Sep 2020 - Sep 2025 </p>
           </div>
              <p className="text-sm md:text-base opacity-70"> Relevant Courses: CS 1MD3 Introduction to Programming (A+) <br/>
                 CS 1XC3 Development Basics (A) <br/>
