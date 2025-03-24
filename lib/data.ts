@@ -8,7 +8,7 @@ export const adpData = {
     bulletpoints: ["Developed ROE management system to enable employers to submit, amend, view, update, delete ROE with Java, Springboot, SQL, React, and TypeScript, reducing processing time by 60%",
     "Saved customers 100+ hours of manual work by developing PDF extraction feature to auto-generate a PDF from completed ROE forms and accelerated ROE form processing time by 50%", 
     "Cross-collaborated with 3rd party teams to discuss corruption in database metadata and successfully resolving them reducing workload for 100+ developers", 
-    "Fixed 15+ critical bugs in a short amount of time improving user experience"]
+    "Identified and resolved 15+ critical production bugs in a week by conducting XML and API testing with Postman"]
 };
 export const TDdata = {
     image: "/td-group-pic.jpg",
