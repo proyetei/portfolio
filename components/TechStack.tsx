@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { IconType } from 'react-icons';
 import { FaJava, FaPython, FaReact, FaDocker } from 'react-icons/fa';
+import { FaGolang } from 'react-icons/fa6';
 import { SiC, SiNextdotjs, SiAngular, SiSpringboot, SiTypescript, SiJavascript, SiMongodb, SiMysql, SiGraphql, SiFlask, SiSelenium, SiCucumber, SiPostman, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql } from 'react-icons/si';
 interface TechStackItem {
     name: string;
@@ -12,6 +13,7 @@ const techStacks: Record<string, TechStackItem[]> = {
         { name: 'Java', icon: FaJava },
         { name: 'Python', icon: FaPython },
         { name: 'C', icon: SiC },
+        { name: 'Go', icon: FaGolang },
         { name: 'Typescript', icon: SiTypescript },
         { name: 'Javascript', icon: SiJavascript },
     ],
@@ -39,27 +41,29 @@ const techStacks: Record<string, TechStackItem[]> = {
 };
 
 const renderCategory = (title: string, items: TechStackItem[]): JSX.Element => (
-    <div key={title}>
+    <div key={title} className="mb-8">
         <p className="md:text-xl text-base font-bold mb-4">{title}</p>
-        <div className="flex">
-            <div className='grid grid-cols-4 md:grid-rows-1 gap-x-16 gap-y-4 md:gap-4'>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {items.map(({ name, icon: Icon }) => (
-                <div key={name} className="items-center md:text-base text-sm">
+                <div key={name} className="flex items-center gap-2 md:text-base text-sm">
                     <Icon size={24} />
                     <span>{name}</span>
                 </div>
             ))}
-            </div>
         </div>
     </div>
 );
 
 const TechStack: FC = () => (
-    <div className="p-4 flex flex-col space-y-8">
-        {renderCategory('Languages', techStacks.languages)}
-        {renderCategory('Frameworks', techStacks.frameworks)}
-        {renderCategory('Tools', techStacks.tools)}
-        {renderCategory('Databases & storage', techStacks.databases)}
+    <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-8">
+            {renderCategory('Languages', techStacks.languages)}
+            {renderCategory('Tools', techStacks.tools)}
+        </div>
+        <div className="space-y-8">
+            {renderCategory('Frameworks', techStacks.frameworks)}
+            {renderCategory('Databases & storage', techStacks.databases)}
+        </div>
     </div>
 );
 
