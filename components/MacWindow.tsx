@@ -1,11 +1,12 @@
 "use client"
 import { FaXmark } from "react-icons/fa6";
+import { FaGolang } from "react-icons/fa6";
 import { MdOutlineOpenInFull } from "react-icons/md";
 import Draggable from 'react-draggable';
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { FaPython, FaReact, FaNodeJs, FaMinus, } from 'react-icons/fa';
-import { SiClerk, SiTailwindcss, SiTypescript, SiMongodb, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql, SiGraphql } from 'react-icons/si';
+import { FaPython, FaReact, FaNodeJs, FaMinus} from 'react-icons/fa';
+import { SiClerk, SiDocker, SiHaskell, SiTailwindcss, SiTypescript, SiMongodb, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql, SiGraphql } from 'react-icons/si';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { motion, useInView } from "framer-motion"
 import { useRouter } from "next/navigation";
@@ -20,27 +21,30 @@ export const AetherTechStack =  [
     { name: 'AWS S3', icon: SiAwsamplify },
     { name: "Clerk", icon: SiClerk },
 ]
-export const AttendEaseTechStack = [
+export const SystemBenchmarkingTechStack = [
     { name: "Python", icon: FaPython },
-    { name: "Firebase", icon: SiFirebase},
-    { name: "Google Cloud Platform", icon: SiGooglecloud},
+    { name: "Haskell", icon: SiHaskell },
+    { name: "Go", icon: FaGolang },
+    { name: "Docker", icon: SiDocker },
 ]
+
 export default function MacWindow(){
     const customTransform = () => {
         switch (activeTab) {
           case "aether":
             return "translateY(0%)";
-          case "attendease":
+          case "systembenchmarking":
             return "translateY(100%)";
           default:
             return "translateY(0%)";
         }
       };
     const [activeTab, setActiveTab] = useState("aether");
+    const nodeRef = useRef(null); // Create a node ref for Draggable
     return(
         <div className=" w-screen flex flex-col items-center justify-center text-slate-300">
-            <Draggable>
-        <div className=" rounded-xl w-4/6 h-[400px]">
+            <Draggable defaultPosition={{ x: 0, y: 0 }} nodeRef={nodeRef}>
+        <div ref = {nodeRef} className=" rounded-xl w-4/6 h-[400px]">
             <div className="bg-stone-800 h-10 w-full rounded-t-xl p-2"> 
                 <div className="flex flex-row gap-4">
                     <div className="flex flex-row gap-2 items-center justify-start">
@@ -63,7 +67,7 @@ export default function MacWindow(){
           style={{ transform: customTransform() }}
         ></motion.div>
                     <button className={`${subTitle.className} hover:bg-stone-600 hover:text-stone-800 md:text-lg text-sm p-2`} onClick={() => setActiveTab("aether") }> Aether </button>
-                    <button className={`${subTitle.className} hover:bg-stone-600 hover:text-stone-800 md:text-lg text-sm p-2`} onClick={() => setActiveTab("attendease")}> AttendEase </button>
+                    <button className={`${subTitle.className} hover:bg-stone-600 hover:text-stone-800 md:text-lg text-sm p-2`} onClick={() => setActiveTab("systembenchmarking")}> System Benchmarking </button>
                 </div>
                 {activeTab === "aether" ? (
                 <div className="bg-stone-900 rounded-br-xl p-2">
@@ -108,9 +112,9 @@ export default function MacWindow(){
                     animate={ {
                         opacity: 1,
                         transition: {duration: 0.75, ease: 'easeInOut', delay:0.5}} } className="flex flex-col items-center justify-center gap-8">
-                        <Image src="/attend-ease.png" height={500} width={500} alt="attend ease" />
+                        <Image src="/Testcase_example.png" height={500} width={500} alt="system benchmarking" />
                         <div className="flex space-x-4">
-                            {AttendEaseTechStack.map(({ name, icon: Icon }) => (
+                            {SystemBenchmarkingTechStack.map(({ name, icon: Icon }) => (
                                 <div key={name} className=" flex flex-col items-center md:text-base text-sm mx-2 p-2 rounded hover:bg-stone-700">
                                     <div>
 
@@ -122,7 +126,7 @@ export default function MacWindow(){
                         </div>
                         <div className="p-4">
                             <p className="text-2xl text-bold"> Project description </p>
-                    <p>A student attendance tracking software utilizing facial recognition via webcam using the Haar Cascade algorithm, integrating with GCP and Firebase to manage user data.
+                    <p> System benchmarking of various proof assistants such as Idris, Agda, Coq, Lean.
                     </p>
                     </div>
                     </motion.div> 
