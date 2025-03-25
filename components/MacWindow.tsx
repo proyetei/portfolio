@@ -126,7 +126,9 @@ export default function MacWindow(){
                         </div>
                         <div className="p-4">
                             <p className="text-2xl text-bold"> Project description </p>
-                    <p> System benchmarking of various proof assistants such as Idris, Agda, Coq, Lean.
+                    <p> The goal of this capstone research project is to design a translator and build an automated code generator that creates a series of tests of increasing size that will test the efficiency of interactive proof assistants including Lean, Idris, Agda, and Coq. 
+The project will also include a CI/CD pipeline using GitHub Actions, Go, and Docker which will allow users to run the tests. The system will provide a link to the website created with Flask and React visualizing the performance for increasing sizes vs system time, real time, user time and memory. The goal of this capstone research project is to design a translator and build an automated code generator that creates a series of tests of increasing size that will test the efficiency of interactive proof assistants including Lean, Idris, Agda, and Coq. The project will also include a CI/CD pipeline using GitHub Actions, Go, and Docker which will allow users to run the tests. The system will provide a link to the website created with Flask and React visualizing the performance for increasing sizes vs system time, real time, user time and memory. 
+
                     </p>
                     </div>
                     </motion.div> 
