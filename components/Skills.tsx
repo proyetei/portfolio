@@ -16,8 +16,8 @@ export default function Skills(){
                 
             }}>
             <div className="flex text-left mb-6">
-                <p> My strongest soft skill is my exceptional ability to thrive under high pressure, honed through extensive experience as a Software Engineer in three dynamic, fast-paced, and agile companies.
-                <br/> I am a dedicated learner, problem solver, and a persistent self starter who is able to take ownership of tasks and collaborate across teams.   </p>
+                <p> My strongest soft skill is my ability to work and handle high-pressure situations well. I have learned this skill through working as SWE intern in various fast-paced, agile companies.
+                <br/> I am a self-starter who solves problems efficiently, takes ownership of tasks, and collaborates well in cross-functional teams. </p>
             </div>
             <div className="grid grid-cols-2">
                 <TechStack />
