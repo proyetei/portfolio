@@ -5,10 +5,7 @@ export const adpData = {
     company: "Automatic Data Processing (ADP)",
     date: "May 6, 2024 - Jul 26, 2024",
     type: "Co-op",
-    bulletpoints: ["Developed ROE management system to enable employers to submit, amend, view, update, delete ROE with Java, Springboot, SQL, React, and TypeScript, reducing processing time by 60%",
-    "Saved customers 100+ hours of manual work by developing PDF extraction feature to auto-generate a PDF from completed ROE forms and accelerated ROE form processing time by 50%", 
-    "Cross-collaborated with 3rd party teams to discuss corruption in database metadata and successfully resolving them reducing workload for 100+ developers", 
-    "Identified and resolved 15+ critical production bugs in a week by conducting XML and API testing with Postman"]
+    bulletpoints: ["Developed ROE management system with Java, Springboot, SQL, React, and TypeScript"]
 };
 export const TDdata = {
     image: "/td-group-pic.jpg",
@@ -17,8 +14,7 @@ export const TDdata = {
     company: "Toronto-Dominion Bank (TD)",
     date: "May 1, 2023 - Dec 22, 2023",
     type: "Co-op",
-    bulletpoints: ["Developed 50+ scripts for automating workflows of PEGA application in Java, Angular, Selenium and Cucumber impacting 200K+ customers",
-    "Reduced BDD test flakiness by 30% and automation execution time by 50% through robust parallelization strategies",]
+    bulletpoints: ["Development of PEGA application in Java, Angular, Selenium and Cucumber impacting 200K+ customers"]
 };
 export const CanadaPostData = {
     image: "",
@@ -27,9 +23,7 @@ export const CanadaPostData = {
     company: "Canada Post / Postes Canada",
     date: "Jan 9, 2023 - Apr 28, 2023",
     type: "Co-op",
-    bulletpoints: ["Developed CRUD features for E-commerce platform impacting thousands with AngularJS, Typescript, Tailwind, Postman, Git and Bitbucket",
-    "Reduced customer inquiries by 30% by developing 6 email notifications for order status updates, including acknowledgment, processing, supplier receipt, cancellation, shipping, and delivery", 
-    "Fixed various backend API issues with fetching wrong customer information and product details resulting in improved customer satisfaction" ]
+    bulletpoints: ["Developed features for E-commerce platform impacting 100K+ with AngularJS, Typescript, Tailwind, Postman, Git and Bitbucket"]
 };
 
 
@@ -40,7 +34,7 @@ export const LumoseMarketplaceData = {
     company: "Lumose Marketplace",
     date: "Aug, 2022 - Sep 2022",
     type: "Contract Part-time",
-    bulletpoints: ["Developed the landing page and about us page for startup Lumose Marketplace with React.js, Typescript, Tailwind CSS and Figma to prototype resulting in an increase of product sales by 40%, view it at: https://www.lumosemarketplace.com/", "Worked in an agile team of business analysts, developers, and legal experts and attended daily standup meetings with Asana, Slack and Google Meet"]
+    bulletpoints: ["Frontend development with React, Node.js, Tailwind CSS, SQL"]
 }
 
 
