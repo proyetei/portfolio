@@ -5,7 +5,7 @@ import { MdOutlineOpenInFull } from "react-icons/md";
 import Draggable from 'react-draggable';
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { FaPython, FaReact, FaNodeJs, FaMinus} from 'react-icons/fa';
+import { FaPython, FaReact, FaNodeJs, FaMinus, FaBootstrap } from 'react-icons/fa';
 import { SiClerk, SiDocker, SiHaskell, SiTailwindcss, SiTypescript, SiMongodb, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql, SiGraphql } from 'react-icons/si';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { motion, useInView } from "framer-motion"
@@ -16,10 +16,8 @@ export const AetherTechStack =  [
     { name: "NodeJS", icon: FaNodeJs },
     { name: 'TypeScript', icon: SiTypescript },
     { name: 'TailwindCSS', icon: SiTailwindcss },
-    { name: 'PostgreSQL', icon: SiPostgresql },
-    { name: "GraphQL", icon: SiGraphql },
+    { name: 'MongoDB', icon: SiMongodb },
     { name: 'AWS S3', icon: SiAwsamplify },
-    { name: "Clerk", icon: SiClerk },
 ]
 export const SystemBenchmarkingTechStack = [
     { name: "Python", icon: FaPython },
@@ -27,19 +25,27 @@ export const SystemBenchmarkingTechStack = [
     { name: "Go", icon: FaGolang },
     { name: "Docker", icon: SiDocker },
 ]
+export const AmimaTechStack = [
+    { name: 'AngularJS 13', icon: FaReact },
+    { name: "NodeJS", icon: FaNodeJs },
+    { name: 'TypeScript', icon: SiTypescript },
+    { name: 'Bootstrap', icon: FaBootstrap },
+    { name: 'MongoDB', icon: SiMongodb },
+    { name: 'Firebase', icon: SiFirebase },
+]
 
 export default function MacWindow(){
     const customTransform = () => {
         switch (activeTab) {
-          case "aether":
+          case "amima":
             return "translateY(0%)";
-          case "systembenchmarking":
+          case "aether":
             return "translateY(100%)";
           default:
             return "translateY(0%)";
         }
       };
-    const [activeTab, setActiveTab] = useState("aether");
+    const [activeTab, setActiveTab] = useState("amima");
     const nodeRef = useRef(null); // Create a node ref for Draggable
     return(
         <div className=" w-screen flex flex-col items-center justify-center text-slate-300">
@@ -66,8 +72,8 @@ export default function MacWindow(){
           className="border fixed h-11 w-0.5 rounded-t-full border-white transition-transform transform duration-300 ease-in-out drop-shadow-white"
           style={{ transform: customTransform() }}
         ></motion.div>
+                    <button className={`${subTitle.className} hover:bg-stone-600 hover:text-stone-800 md:text-lg text-sm p-2`} onClick={() => setActiveTab("amima")}> Amima </button>
                     <button className={`${subTitle.className} hover:bg-stone-600 hover:text-stone-800 md:text-lg text-sm p-2`} onClick={() => setActiveTab("aether") }> Aether </button>
-                    <button className={`${subTitle.className} hover:bg-stone-600 hover:text-stone-800 md:text-lg text-sm p-2`} onClick={() => setActiveTab("systembenchmarking")}> System Benchmarking </button>
                 </div>
                 {activeTab === "aether" ? (
                 <div className="bg-stone-900 rounded-br-xl p-2">
@@ -82,7 +88,7 @@ export default function MacWindow(){
                         <Image src="/overview.png" width={400} height={600} alt="overview" /> 
                         </div>
                          
-                        <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-2">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-2">
                             {AetherTechStack.map(({ name, icon: Icon }) => (
                                 <div key={name} className=" flex flex-col items-center md:text-base text-sm mx-2 p-2 rounded hover:bg-stone-700">
                                     <Icon size={22} />
@@ -93,28 +99,26 @@ export default function MacWindow(){
                         <ScrollArea className="h-[250px] w-11/12 rounded-md border p-4">
                         <div className="p-4">
                             <p className="text-2xl text-bold"> Project description </p>
-                            <p> Unlock hidden clues of your mind with our gamified mental health app, combining AI-driven insights from correlation between your dreams and daily journaling and various fun activities!
-                            <li> Generate images with AI and generate hidden pyschological patterns found from the correlation of your dreams and personal life events to undrstand your psyche! </li>
+                            <li> Unlock hidden clues of your mind with our gamified mental health app, combining AI-driven insights from correlation between your dreams and daily journaling. </li>
                             <li> Earn points through daily journaling and through daily activities like tracking your moods with the easy to use calendar mood tracker.  </li>
                             <li> View mood analytics charts that summarizes your yearly and monthly mood report. </li>
-                            </p>
                         </div>
                     </ScrollArea>
 
                     </div>
                     </motion.div>
                 </div>
-                ) :
-                (<div className="bg-stone-900 rounded-r-xl p-2">
+                ) :  (
+                    <div className="bg-stone-900 rounded-r-xl p-2">
                     <div className="p-8">
                     <motion.div 
                     initial={{opacity: 0,}}
                     animate={ {
                         opacity: 1,
                         transition: {duration: 0.75, ease: 'easeInOut', delay:0.5}} } className="flex flex-col items-center justify-center gap-8">
-                        <Image src="/Testcase_example.png" height={500} width={500} alt="system benchmarking" />
-                        <div className="flex space-x-4">
-                            {SystemBenchmarkingTechStack.map(({ name, icon: Icon }) => (
+                        <Image src="/amima_pic.jpg" height={500} width={500} alt="amima" />
+                        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-2">
+                            {AmimaTechStack.map(({ name, icon: Icon }) => (
                                 <div key={name} className=" flex flex-col items-center md:text-base text-sm mx-2 p-2 rounded hover:bg-stone-700">
                                     <div>
 
@@ -126,15 +130,15 @@ export default function MacWindow(){
                         </div>
                         <div className="p-4">
                             <p className="text-2xl text-bold"> Project description </p>
-                    <p> The goal of this capstone research project is to design a translator and build an automated code generator that creates a series of tests of increasing size that will test the efficiency of interactive proof assistants including Lean, Idris, Agda, and Coq. 
-The project will also include a CI/CD pipeline using GitHub Actions, Go, and Docker which will allow users to run the tests. The system will provide a link to the website created with Flask and React visualizing the performance for increasing sizes vs system time, real time, user time and memory. 
-                    </p>
+                            <p> Amima is a university product review and social media platform designed to help students share reviews and connect. The platform supports CRUD operations for sharing multimedia content, allowing users to create, manage, and interact with posts seamlessly. RESTful API endpoints handle follow and comment functionality, while content-based filtering ensures a personalized homefeed showcasing relevant product reviews.</p>
+
                     </div>
                     </motion.div> 
                     </div>
                               
 
-                </div> ) }
+                </div> 
+                ) }
             </div>
         </div>
         </Draggable>
