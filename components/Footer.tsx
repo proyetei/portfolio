@@ -8,7 +8,7 @@ export default function Footer(){
 				<a href="https://www.linkedin.com/in/proyeteiakanda/" className="hover:underline"> LinkedIn </a> <TfiArrowTopRight />
 				<a href="https://github.com/proyetei" className="hover:underline"> GitHub </a> <TfiArrowTopRight />
 			</p>
-            <p> Thanks for visiting my website! :) </p>
+            <p> Developed with Next.js, Typescript, Tailwind CSS </p>
         </div>
     )
 }
