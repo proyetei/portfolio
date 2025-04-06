@@ -22,6 +22,7 @@ const techStacks: Record<string, TechStackItem[]> = {
         { name: 'React', icon: FaReact },
         { name: 'Angular', icon: SiAngular },
         { name: 'Spring Boot', icon: SiSpringboot },
+        { name: 'Flask', icon: SiFlask},
         { name: 'Selenium', icon: SiSelenium },
     ],
     tools: [
@@ -33,7 +34,6 @@ const techStacks: Record<string, TechStackItem[]> = {
         { name: "Postgre SQL", icon: SiPostgresql},
         { name: 'Mongo DB', icon: SiMongodb },
         { name: 'MySQL', icon: SiMysql },
-        { name: 'GraphQL', icon: SiGraphql },
         { name: 'AWS S3', icon: SiAwsamplify },
         { name: 'Firebase', icon: SiFirebase },
         { name: 'GCP', icon: SiGooglecloud },

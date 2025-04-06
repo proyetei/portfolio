@@ -5,7 +5,7 @@ export const adpData = {
     company: "Automatic Data Processing (ADP)",
     date: "May 6, 2024 - Jul 26, 2024",
     type: "Co-op",
-    bulletpoints: ["Developed ROE management system with Java, Springboot, SQL, React, and TypeScript"]
+    bulletpoints: ["Developed ROE management system with Java, Springboot, SQL, React, TypeScript and Postman"]
 };
 export const TDdata = {
     image: "/td-group-pic.jpg",
@@ -14,7 +14,7 @@ export const TDdata = {
     company: "Toronto-Dominion Bank (TD)",
     date: "May 1, 2023 - Dec 22, 2023",
     type: "Co-op",
-    bulletpoints: ["Development of PEGA application in Java, Angular, Selenium and Cucumber impacting 200K+ customers"]
+    bulletpoints: ["Automation, scripting and development of PEGA application in Java, Angular, Selenium and Cucumber impacting 200K+ customers"]
 };
 export const CanadaPostData = {
     image: "",
@@ -23,7 +23,7 @@ export const CanadaPostData = {
     company: "Canada Post / Postes Canada",
     date: "Jan 9, 2023 - Apr 28, 2023",
     type: "Co-op",
-    bulletpoints: ["Developed features for E-commerce platform impacting 100K+ with AngularJS, Typescript, Tailwind, Postman, Git and Bitbucket"]
+    bulletpoints: ["Developed frontend and backend features for E-commerce platform impacting 100K+ with AngularJS 13, Node.js, PostgreSQL, Typescript, Tailwind, and Postman"]
 };
 
 
@@ -34,7 +34,7 @@ export const LumoseMarketplaceData = {
     company: "Lumose Marketplace",
     date: "Aug, 2022 - Sep 2022",
     type: "Contract Part-time",
-    bulletpoints: ["Frontend development with React, Node.js, Tailwind CSS, SQL"]
+    bulletpoints: ["Frontend development with React, Node.js, Tailwind CSS"]
 }
 
 
@@ -45,7 +45,7 @@ export const ViewingPartyData = {
     company: "Viewing Party",
     date: "June 22, 2022 - Aug 2022",
     type: "Contract Full-time",
-    bulletpoints: ["Developed the Chrome extension for startup ViewingParty with NEXT.JS 12.1 (2022), Typescript, Tailwind CSS, and Chakra-UI frontend and Express.js, Axios, Rapid API and Socket IO backend", "Utilized HTTP requests to 4+ 3rd party services including Netflix, Disney+, HBO Max and Peacock viewing with a streamer on Twitch to allow up to 100K+ users to watch video streams LEGALLY in sync with others"]
+    bulletpoints: ["Developed the Chrome extension backend and website frontend for startup ViewingParty with NEXT.JS 12.1 (2022), Typescript, Tailwind CSS, and Chakra-UI frontend and Express.js, Axios, Rapid API and Socket IO backend", "Utilized HTTP requests to 4+ 3rd party services including Netflix, Disney+, HBO Max and Peacock viewing with a streamer on Twitch to allow up to 100K+ users to watch video streams LEGALLY in sync with others"]
 }
 
 export const CSSData = {
