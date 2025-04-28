@@ -8,7 +8,8 @@ export default function Footer(){
 				<a href="https://www.linkedin.com/in/proyeteiakanda/" className="hover:underline"> LinkedIn </a> <TfiArrowTopRight />
 				<a href="https://github.com/proyetei" className="hover:underline"> GitHub </a> <TfiArrowTopRight />
 			</p>
-            <p> Developed with Next.js, Typescript, Tailwind CSS </p>
+            <p className="flex items-center justify-center"> Developed with Next.js, Typescript, Tailwind CSS </p>
+            <p> Copyright 2025 Proyetei Reivue Akanda </p>
         </div>
     )
 }

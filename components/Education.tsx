@@ -43,7 +43,8 @@ export default function Education(){
                 CS 2LC3 Logical Reasoning for Computer Science (A) <br/>
                 CS 2GA3 Computer Architecture (A) <br/>
                 CS 3DM3 Data Mining (A) <br/>
-                CS 3AC3 Data Structure: Algorithms and Complexity (A)</p>
+                CS 3AC3 Data Structure: Algorithms and Complexity (A) <br/>
+                CS 4ZP6A Capstone (A+) </p>
           </div>
         </div>
             </div>
