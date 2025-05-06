@@ -14,7 +14,8 @@ export const TDdata = {
     company: "Toronto-Dominion Bank (TD)",
     date: "May 1, 2023 - Dec 22, 2023",
     type: "Co-op",
-    bulletpoints: ["Technologies: AngularJS, Java, Selenium, Cucumber, Maven, Postman", "Developed 50+ test automation and pipeline scripts in Java, reducing execution time by 50% by following SOLID principles",
+    bulletpoints: ["Technologies: AngularJS, Java, Selenium, Cucumber, Maven, Postman", 
+        "Developed 50+ test automation and pipeline scripts in Java, reducing execution time by 50% by following SOLID principles",
         "Reduced BDD and TDD test flakiness by 30% through robust parallelization algorithms like dynamic scheduling"]
 };
 export const CanadaPostData = {
@@ -25,7 +26,9 @@ export const CanadaPostData = {
     date: "Jan 9, 2023 - Apr 28, 2023",
     type: "Co-op",
     bulletpoints: ["Technologies: AngularJS, Node.js, TypeScript, PostgreSQL, Azure, Kubernetes, SAML 2.0, Postman", 
-        "Built 10+ APIs to display 20+ flat-rate products with pagination, real-time SKUs, pricing, and availability by integrating KIBO E-commerce and SAP on Azure Kubernetes Service (AKS)", "Built an automated notification system that auto-triggered 6 different emails based on SAP order status changes, achieving 40% reduction in customer inquiries"]
+        "Built 10+ APIs to display 20+ flat-rate products with pagination, real-time SKUs, pricing, and availability by integrating KIBO E-commerce and SAP on Azure Kubernetes Service (AKS)", 
+        "Built RESTful APIs in AngularJS and Typescript, performed data query manipulation and wrote Regex to store customer data, order data, product data on the backend with PostgreSQL and display it on the frontend", 
+        "Built an automated notification system that auto-triggered 6 different emails based on SAP order status changes, achieving 40% reduction in customer inquiries"]
 };
 
 
@@ -36,7 +39,7 @@ export const LumoseMarketplaceData = {
     company: "Lumose Marketplace",
     date: "Aug, 2022 - Sep 2022",
     type: "Contract Part-time",
-    bulletpoints: ["Frontend development with React, Node.js, Tailwind CSS"]
+    bulletpoints: ["Built the about us and landing page with React, Node.js, Typescript and Tailwind CSS"]
 }
 
 
