@@ -5,7 +5,7 @@ export const adpData = {
     company: "Automatic Data Processing (ADP)",
     date: "May 6, 2024 - Jul 26, 2024",
     type: "Co-op",
-    bulletpoints: ["Developed ROE management system with Java, Springboot, SQL, React, TypeScript and Postman"]
+    bulletpoints: ["End-to-end development of Record Of Employment manager and dashboard integrated with Service Canada workflow that allows payroll admins and employers to amend/submit/view/update/delete ROE increasing operational efficiency by 50%"]
 };
 export const TDdata = {
     image: "/td-group-pic.jpg",
@@ -14,7 +14,8 @@ export const TDdata = {
     company: "Toronto-Dominion Bank (TD)",
     date: "May 1, 2023 - Dec 22, 2023",
     type: "Co-op",
-    bulletpoints: ["Automation, scripting and development of PEGA application in Java, Angular, Selenium and Cucumber impacting 200K+ customers"]
+    bulletpoints: ["Technologies: AngularJS, Java, Selenium, Cucumber, Maven, Postman", "Developed 50+ test automation and pipeline scripts in Java, reducing execution time by 50% by following SOLID principles",
+        "Reduced BDD and TDD test flakiness by 30% through robust parallelization algorithms like dynamic scheduling"]
 };
 export const CanadaPostData = {
     image: "",
@@ -23,7 +24,8 @@ export const CanadaPostData = {
     company: "Canada Post / Postes Canada",
     date: "Jan 9, 2023 - Apr 28, 2023",
     type: "Co-op",
-    bulletpoints: ["Developed frontend and backend features for E-commerce platform impacting 100K+ with AngularJS 13, Node.js, PostgreSQL, Typescript, Tailwind, and Postman"]
+    bulletpoints: ["Technologies: AngularJS, Node.js, TypeScript, PostgreSQL, Azure, Kubernetes, SAML 2.0, Postman", 
+        "Built 10+ APIs to display 20+ flat-rate products with pagination, real-time SKUs, pricing, and availability by integrating KIBO E-commerce and SAP on Azure Kubernetes Service (AKS)", "Built an automated notification system that auto-triggered 6 different emails based on SAP order status changes, achieving 40% reduction in customer inquiries"]
 };
 
 

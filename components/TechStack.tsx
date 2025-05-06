@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { IconType } from 'react-icons';
 import { FaJava, FaPython, FaReact, FaDocker } from 'react-icons/fa';
 import { FaGolang } from 'react-icons/fa6';
-import { SiC, SiNextdotjs, SiAngular, SiSpringboot, SiTypescript, SiJavascript, SiMongodb, SiMysql, SiGraphql, SiFlask, SiSelenium, SiCucumber, SiPostman, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql } from 'react-icons/si';
+import { SiC, SiNextdotjs, SiKubernetes, SiAngular, SiSpringboot, SiTypescript, SiJavascript, SiMongodb, SiMysql, SiGraphql, SiFlask, SiSelenium, SiCucumber, SiPostman, SiAwsamplify, SiFirebase, SiGooglecloud, SiPostgresql } from 'react-icons/si';
 interface TechStackItem {
     name: string;
     icon: IconType;
@@ -37,6 +37,7 @@ const techStacks: Record<string, TechStackItem[]> = {
         { name: 'AWS S3', icon: SiAwsamplify },
         { name: 'Firebase', icon: SiFirebase },
         { name: 'GCP', icon: SiGooglecloud },
+        { name: 'Kubernetes', icon: SiKubernetes }
     ],
 };
 
